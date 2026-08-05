@@ -1,5 +1,5 @@
 // Patch PWA Service Worker
-var CACHE_NAME = 'patch-v1784259724';
+var CACHE_NAME = 'patch-v1785904050';
 var OFFLINE_URL = '/offline.html';
 
 // 安装：预缓存离线页面
