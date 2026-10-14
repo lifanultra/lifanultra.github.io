@@ -1,26 +1,14 @@
 <!-- jquery -->
-<% if (isCdnEnable('jquery')) {%>
-  <%- getCdnScript('jquery') %>
-<% } else { %>
-  <%- js('lib/jquery/jquery.min') %>
-<% } %>
+<script>SiteAssets.script('<%- url_for('lib/jquery/jquery.min.js') %>');</script>
 
 <% if (page.photos && page.photos.length) { %>
-  <% if (isCdnEnable('justified_gallery_js')) {%>
-    <%- getCdnScript('justified_gallery_js') %>
-  <% } else { %>
-    <%- js('lib/justified-gallery/js/jquery.justifiedGallery.min.js') %>
-  <% } %>
+  <script>SiteAssets.script('<%- url_for('lib/justified-gallery/js/jquery.justifiedGallery.min.js') %>');</script>
 <% } %>
 
 <!-- clipboard -->
 <% if (is_post()){ %>
-  <% if (isCdnEnable('clipboard')) { %>
-    <%- getCdnScript('clipboard') %>
-  <% } else { %>
-    <%- js('lib/clipboard/clipboard.min') %>
-  <% } %>
-  <script type="text/javascript">
+  <script>SiteAssets.script('<%- url_for('lib/clipboard/clipboard.min.js') %>');</script>
+  <script>SiteAssets.run(function () {
   $(function() {
     // copy-btn HTML
     var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"<%= __('tooltip.copy_tip') %>\">";
@@ -38,13 +26,14 @@
       e.clearSelection();
     })
   })
-  </script>
+
+});</script>
 <% } %>
-<%- js('js/main') %>
+<script>SiteAssets.script('<%- url_for('js/main.js') %>');</script>
 <!-- search -->
 <% if (config.search && (page.search || page.type === "search")){ %>
-  <%- js('js/search.js') %>
-  <script type="text/javascript">
+  <script>SiteAssets.script('<%- url_for('js/search.js') %>');</script>
+  <script>SiteAssets.run(function () {
   $(function() {
 
     var $inputArea = $("input#search-input");
@@ -78,11 +67,12 @@
     observer.observe($resultArea, { childList: true });
 
   });
-  </script>
+
+});</script>
 <% } %>
 <!-- Baidu Analytics -->
 <% if (theme.baidu_analytics.enabled && theme.baidu_analytics.id){ %>
-  <script type="text/javascript">
+  <script>SiteAssets.run(function () {
         var _hmt = _hmt || [];
         (function() {
           var hm = document.createElement("script");
@@ -90,7 +80,8 @@
           var s = document.getElementsByTagName("script")[0];
           s.parentNode.insertBefore(hm, s);
         })();
-        </script>
+
+});</script>
 <% } %>
 <!-- Cloudflare Analytics -->
 <% if (theme.cloudflare_analytics.enabled && theme.cloudflare_analytics.id){ %>
@@ -98,7 +89,7 @@
 <% } %>
 <!-- Disqus Comments -->
 <% if (page.comments && theme.disqus.enabled && theme.disqus.shortname){ %>
-    <script type="text/javascript">
+    <script>SiteAssets.run(function () {
         var disqus_shortname = '<%= theme.disqus.shortname %>';
 
         (function(){
@@ -108,11 +99,12 @@
             dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments){ %>embed.js<% } else { %>count.js<% } %>';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         }());
-    </script>
+
+});</script>
 <% } %>
 <!-- utterances Comments -->
 <% if (page.comments && theme.utterances.enabled && theme.utterances.repo && theme.utterances.issue_term && theme.utterances.theme){ %>
-    <script type="text/javascript">
+    <script>SiteAssets.run(function () {
       var utterances_repo = '<%= theme.utterances.repo %>';
       var utterances_issue_term = '<%= theme.utterances.issue_term %>';
       var utterances_label = '<%= theme.utterances.label %>';
@@ -130,9 +122,9 @@
           script.async = true;
           (document.getElementById('utterances_thread')).appendChild(script);
       }());
-  </script>
+
+});</script>
 <% } %>
 
-<%- js("js/site-age") %>
 
-<%- js("js/retire-legacy-worker") %>
+<script>SiteAssets.script('<%- url_for('js/retire-legacy-worker.js') %>');</script>

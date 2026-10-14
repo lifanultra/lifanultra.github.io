@@ -5,7 +5,7 @@
 # Link to a page that gives an overview of all your projects.
 # This can be an external link (e.g., to you GitHub profile) or to another
 # page within your website.
-projects_url: https://github.com/lifanultra
+projects_url: /
 
 # Set the page direction to RTL or LTR. default is LTR. (if you set it 'rtl', the 'vazir' font will be loaded.)
 direction: ltr
@@ -17,39 +17,16 @@ nav:
   home: /
   about: /about/
   articles: /archives/
-  projects: https://github.com/lifanultra
 
 
 # Links to your social media accounts.
 # The 'icon' keys should correspond to Fontawesome icon names
-# (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
 # You can optionally add a 'label' key to set the title attribute on the link. 
 # 'icon' value will be used as title when 'label' is missing.
-social_links:
-  -
-    icon: github
-    link: https://github.com/lifanultra/lifanultra.github.io
-  -
-    icon: twitter
-    link: /
-  -
-    icon: facebook
-    link: /
-  -
-    icon: mail
-    link: mailto:name@email.com
-  -
-    icon: mastodon
-    label: mastodon.social
-    link: https://mastodon.social/@alice
-  -
-    icon: mastodon
-    label: fosstodon.org
-    link: https://fosstodon.org/@alice
+social_links: false
 
 # Customize the overview with displaying a tagcloud on the index page.
-# Options: https://hexo.io/docs/helpers.html#tagcloud
 tags_overview: false
 
 # Customize the overview with the most recent blog posts on the index page.
@@ -116,7 +93,6 @@ logo:
 #   - desktop: The classic favion.ico file.
 #   - android: A 192x192 PNG file.
 #   - apple:  A 180x180 PNG file.
-# These can be generated with http://realfavicongenerator.net/
 # Options:
 #   - url: where the icon can be found
 #   - gravatar: whether to create a favicon from your Gravatar
@@ -150,8 +126,6 @@ page_width: 48
 
 # Enable or disable the RSS feed.
 rss: false
-
-# Turn your web pages into graph objects (see http://ogp.me).
 open_graph:
   fb_app_id:
   fb_admins:
@@ -199,7 +173,7 @@ cloudflare_analytics:
 umami_analytics:
   enabled: false
   id: e77e68be-f6e4-4br3-9365-2b76b57cd571
-  host: https://analytics.domain.com
+  host: ''
   script_name: umami.js
 
 # Fill in you Gravatar email or hash if you want to use your gravatar as the
@@ -208,12 +182,3 @@ umami_analytics:
 gravatar:
   email: name@email.com
   hash: d41d8cd98f00b204e9800998ecf8427e
-
-# loads libraries and styles from CDN instead or relying on local files
-cdn:
-  enable: true
-  jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
-  clipboard: https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js
-  font_awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
-  justified_gallery_css: https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css
-  justified_gallery_js: https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js

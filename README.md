@@ -2,6 +2,8 @@
 
 Hexo 8，默认主题 LIFANULTRA 0.2。
 
+本站地址：https://blog.lifan.icu/。
+
 ## 本地使用
 
 ```sh

@@ -1,6 +1,4 @@
 # Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
 
 # Site
 title: "LIFANULTRA's Blog"
@@ -12,8 +10,7 @@ language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://lifanultra.github.io
+url: https://blog.lifan.icu
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -70,13 +67,11 @@ category_map:
 tag_map:
 
 # Metadata elements
-## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
@@ -94,8 +89,6 @@ exclude:
 ignore:
 
 # Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
 theme: LIFANULTRA
 
 # LIFANULTRA 主题设置
@@ -126,7 +119,7 @@ theme_config:
     home: /
     about: /about/
     articles: /archives/
-    tag: /tags/
+    # tag: /tags/ # 隐藏菜单入口，保留标签页面和文章标签
 
   # 首页显示的最近文章数量
   posts_overview:
@@ -136,9 +129,6 @@ theme_config:
 
   # 首页不显示标签云
   tags_overview: false
-
-  # 建站时间（北京时间），用于页脚实时计算存在时长
-  site_since: '2015-12-12T00:00:00+08:00'
 
   # 版权年份
   copyright:
@@ -152,20 +142,13 @@ theme_config:
     title: "404 页面不存在"
     description: "你访问的页面可能已被删除、改名，或暂时无法访问。"
 
-  # 开启数学公式（从 cdnjs 加载 MathJax，正文里用 $...$ 或 $$...$$ 写公式）
+  # 开启数学公式（MathJax 使用 CDN 与本地竞速，正文里用 $...$ 或 $$...$$ 写公式）
   mathjax:
     enabled: true
 
-  # 社交图标。默认值指向主题作者，已置空。
-  # 要加自己的账号时，把下面注释打开并按格式写，icon 用 Font Awesome 图标名
+  # 社交图标暂不启用。
   social_links: false
-  # social_links:
-  #   - icon: github
-  #     link: https://github.com/你的用户名
-  #   - icon: mail
-  #     link: mailto:i@lifan.uno
 
 # Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: production

@@ -56,9 +56,9 @@
     <link id="theme-dark" rel="stylesheet" href="<%- url_for('css/style.css') %>">
     <link id="theme-light" rel="stylesheet" href="<%- url_for('css/style-light.css') %>">
     <script src="<%- url_for('js/theme-mode.js') %>"></script>
-    <link rel="stylesheet" href="<%- url_for('css/fonts-cdn.css') %>">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="<%- url_for('js/asset-loader.js') %>"></script>
+    <script>SiteAssets.style('<%- url_for('css/fonts-local.css') %>');</script>
+    <noscript><link rel="stylesheet" href="<%- url_for('css/fonts-local.css') %>"></noscript>
     <!-- persian styles -->
     <% if (theme.direction && theme.direction === 'rtl') { %>
       <%- css('css/rtl') %>
@@ -80,6 +80,6 @@
 			}
 		  });
 		</script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+		<script>SiteAssets.loadScript('<%- url_for('lib/mathjax/MathJax.js') %>?config=TeX-MML-AM_CHTML');</script>
 	<% } %>
 </head>

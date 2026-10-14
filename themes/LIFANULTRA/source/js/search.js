@@ -1,8 +1,8 @@
 // A local search script with the help of
-// [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search)
+// hexo-generator-search
 // Copyright (C) 2015
-// Joseph Pan <http://github.com/wzpan>
-// Shuhao Mao <http://github.com/maoshuhao>
+// Joseph Pan
+// Shuhao Mao
 // This library is free software; you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as
 // published by the Free Software Foundation; either version 2.1 of the
@@ -19,7 +19,7 @@
 // 02110-1301 USA
 //
 // Modified by:
-// Pieter Robberechts <http://github.com/probberechts>
+// Pieter Robberechts
 
 /*exported searchFunc*/
 var searchFunc = function(path, searchId, contentId) {

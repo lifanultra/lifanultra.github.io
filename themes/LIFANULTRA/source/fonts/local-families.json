@@ -1,0 +1,65 @@
+[
+  {
+    "id": "fangsong",
+    "alias": "Document FangSong",
+    "locals": [
+      "仿宋_GB2312",
+      "FangSong_GB2312",
+      "FangSong",
+      "仿宋",
+      "STFangsong",
+      "华文仿宋"
+    ],
+    "subsets": 63,
+    "fallback": "Zhuque Fangsong",
+    "directory": "/fonts/document/"
+  },
+  {
+    "id": "title",
+    "alias": "Document Title",
+    "locals": [
+      "方正小标宋简体",
+      "FZXiaoBiaoSong-B05S",
+      "方正小标宋_GBK"
+    ],
+    "subsets": 348,
+    "fallback": "Source Han Serif CN",
+    "directory": "/fonts/document/"
+  },
+  {
+    "id": "hei",
+    "alias": "Document Hei",
+    "locals": [
+      "SimHei",
+      "黑体",
+      "STHeiti",
+      "华文黑体"
+    ],
+    "subsets": 88,
+    "fallback": "Noto Sans SC",
+    "directory": "/fonts/document/"
+  },
+  {
+    "id": "kai",
+    "alias": "Document Kai",
+    "locals": [
+      "楷体_GB2312",
+      "KaiTi_GB2312",
+      "KaiTi",
+      "楷体",
+      "STKaiti",
+      "华文楷体"
+    ],
+    "subsets": 206,
+    "fallback": "LXGW WenKai",
+    "directory": "/fonts/document/"
+  },
+  {
+    "id": "latin",
+    "alias": "Document Latin",
+    "locals": [],
+    "subsets": 32,
+    "fallback": "Tinos (Times-compatible fallback, not Times New Roman)",
+    "directory": "/fonts/document/"
+  }
+]

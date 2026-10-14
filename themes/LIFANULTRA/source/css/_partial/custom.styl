@@ -71,24 +71,6 @@ article header .author
   border-bottom-color: currentColor
   color: $color-text
 
-#footer .footer-age
-  grid-column: 1 / -1
-  min-height: 20px
-  margin-top: .5rem
-  color: $color-meta
-  text-align: center
-  font-size: 14px
-  line-height: 20px
-  font-variant-numeric: tabular-nums
-
-  [data-unit]
-    display: inline-block
-    min-width: 2ch
-    text-align: center
-
-  [data-unit="days"]
-    min-width: 3ch
-
 @media (max-width: 599px)
   #footer
     grid-template-columns: 1fr
@@ -158,10 +140,10 @@ article .content h2:before
 body code, body kbd, body samp
   font-family: $font-family-body
 
-// One UI scale: navigation, metadata, copyright, mode control, and age.
+// One UI scale: navigation, metadata, copyright, and mode control.
 #header #nav, article header .meta, article header .meta *,
 #footer, #footer .footer-left, #footer .footer-right,
-#footer .footer-age, #footer .theme-toggle, #footer nav,
+#footer .theme-toggle, #footer nav,
 #footer-post, #footer-post #actions-footer, #footer-post #nav-footer
   font-size: 14px
   line-height: 1.5
@@ -169,9 +151,6 @@ body code, body kbd, body samp
 #footer .footer-left
   height: auto
   line-height: 1.5
-
-#footer .footer-age
-  min-height: 21px
 
 body pre, body .highlight
   font-size: 16px
