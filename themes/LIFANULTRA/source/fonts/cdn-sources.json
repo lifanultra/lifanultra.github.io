@@ -1,0 +1,65 @@
+[
+  {
+    "id": "fangsong",
+    "alias": "Document FangSong",
+    "locals": [
+      "仿宋_GB2312",
+      "FangSong_GB2312",
+      "FangSong",
+      "仿宋",
+      "STFangsong",
+      "华文仿宋"
+    ],
+    "remote": "Zhuque Fangsong",
+    "sourceUrl": "https://cdn.jsdelivr.net/npm/@chinese-fonts/zqfs@3.0.0/dist/ZhuqueFangsong-Regular/result.css",
+    "subsets": 63
+  },
+  {
+    "id": "title",
+    "alias": "Document Title",
+    "locals": [
+      "方正小标宋简体",
+      "FZXiaoBiaoSong-B05S",
+      "方正小标宋_GBK"
+    ],
+    "remote": "Source Han Serif CN",
+    "sourceUrl": "https://cdn.jsdelivr.net/npm/@chinese-fonts/syst@3.0.0/dist/SourceHanSerifCN/result.css",
+    "subsets": 348
+  },
+  {
+    "id": "hei",
+    "alias": "Document Hei",
+    "locals": [
+      "SimHei",
+      "黑体",
+      "STHeiti",
+      "华文黑体"
+    ],
+    "remote": "Noto Sans SC",
+    "sourceUrl": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400&display=swap",
+    "subsets": 88
+  },
+  {
+    "id": "kai",
+    "alias": "Document Kai",
+    "locals": [
+      "楷体_GB2312",
+      "KaiTi_GB2312",
+      "KaiTi",
+      "楷体",
+      "STKaiti",
+      "华文楷体"
+    ],
+    "remote": "LXGW WenKai",
+    "sourceUrl": "https://cdn.jsdelivr.net/npm/@chinese-fonts/lxgwwenkai@3.0.0/dist/LXGWWenKai-Regular/result.css",
+    "subsets": 206
+  },
+  {
+    "id": "latin",
+    "alias": "Document Latin",
+    "locals": [],
+    "remote": "Tinos (Times-compatible fallback, not Times New Roman)",
+    "sourceUrl": "https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap",
+    "subsets": 32
+  }
+]
