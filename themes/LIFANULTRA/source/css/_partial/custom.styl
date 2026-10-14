@@ -244,3 +244,11 @@ body a, body a:hover, body a:focus-visible, body a:visited
 body #header a.u-url, body #header a.u-url:hover,
 body #header a.u-url:focus-visible, body #header a.u-url:visited
   text-decoration-line: none !important
+
+// Render the site portrait in a fixed circular frame, in its original colors.
+#header #logo
+  border-radius: 50%
+  aspect-ratio: 1
+  object-fit: cover
+  filter: none
+  -webkit-filter: none

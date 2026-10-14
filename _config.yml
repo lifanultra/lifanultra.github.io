@@ -101,6 +101,18 @@ theme: LIFANULTRA
 # LIFANULTRA 主题设置
 # 这里写的每一项都会覆盖 themes/LIFANULTRA/_config.yml 里的同名项（同名项整体覆盖，不是逐行合并）
 theme_config:
+  logo:
+    enabled: true
+    width: 50
+    height: 50
+    url: /images/avatar.webp
+    gravatar: false
+    grayout: false
+  favicon:
+    desktop:
+      url: /images/avatar.svg
+      gravatar: false
+
   # 配色：blackgreen 黑底绿字（自定义，见 themes/LIFANULTRA/source/css/_colors/blackgreen.styl）
   # 其他可选：dark 蓝黑 / light 灰底 / white 白底 / classic
   colorscheme: blackgreen
