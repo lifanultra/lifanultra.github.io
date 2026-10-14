@@ -5,5 +5,11 @@
   "outputDirectory": "public",
   "installCommand": "npm ci",
   "cleanUrls": false,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "*": false
+    }
+  }
 }
