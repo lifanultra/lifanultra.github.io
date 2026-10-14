@@ -223,7 +223,7 @@ body .content a:not(.u-url):not(.icon):hover, #header #nav a:hover, #footer nav 
 body a, body a:hover, body a:focus-visible, body a:visited
   background-image: none !important
   text-decoration-line: underline !important
-  text-decoration-thickness: 3px !important
+  text-decoration-thickness: 1.5px !important
   text-decoration-color: currentColor !important
   text-underline-offset: .22em !important
   text-decoration-skip-ink: auto !important
@@ -235,7 +235,12 @@ body a, body a:hover, body a:focus-visible, body a:visited
 .theme-toggle[aria-pressed="false"] .theme-choice-light,
 .theme-toggle[aria-pressed="true"] .theme-choice-dark
   text-decoration-line: underline
-  text-decoration-thickness: 3px
+  text-decoration-thickness: 1.5px
   text-decoration-color: currentColor
   text-underline-offset: .22em
   text-decoration-skip-ink: auto
+
+// The site brand remains clickable without an underline.
+body #header a.u-url, body #header a.u-url:hover,
+body #header a.u-url:focus-visible, body #header a.u-url:visited
+  text-decoration-line: none !important
