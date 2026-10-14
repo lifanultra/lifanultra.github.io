@@ -1,0 +1,254 @@
+// 自定义覆盖样式
+// 不直接改主题原有文件，需要覆盖主题样式时统一写在这里，主题更新时冲突点更少
+
+// 文章页作者名不强制大写（主题默认 text-transform: uppercase）
+article header .author
+  text-transform: none
+
+// 页脚采用自然布局，长文章与手机底栏不会覆盖版权和切换控件。
+#footer
+  position: static
+  display: grid
+  grid-template-columns: 1fr auto
+  gap: .65rem 1.5rem
+  margin-top: auto
+  margin-bottom: 0
+  padding-top: 2.5rem
+  padding-bottom: .5rem
+  text-align: left
+
+  .footer-left
+    height: auto
+    margin-right: 0
+    align-self: center
+
+  .footer-right
+    align-self: center
+
+  .footer-theme
+    grid-column: 1 / -1
+    display: flex
+    align-items: center
+    min-height: 44px
+    margin-bottom: .15rem
+
+.theme-toggle
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  gap: .7rem
+  flex-shrink: 0
+  width: 104px
+  height: 44px
+  margin: 0
+  padding: 0
+  border: 0
+  border-radius: 0
+  background: transparent
+  color: $color-meta
+  font: inherit
+  font-size: 14px
+  line-height: 20px
+  cursor: pointer
+  -webkit-tap-highlight-color: transparent
+
+  span
+    display: inline-block
+    border-bottom: 1px solid transparent
+
+  &:hover
+    color: $color-text
+
+  &:focus-visible
+    outline: 1px solid $color-accent-1
+    outline-offset: 2px
+
+  &[hidden]
+    display: none
+
+.theme-toggle[aria-pressed="false"] .theme-choice-light,
+.theme-toggle[aria-pressed="true"] .theme-choice-dark
+  border-bottom-color: currentColor
+  color: $color-text
+
+#footer .footer-age
+  grid-column: 1 / -1
+  min-height: 20px
+  margin-top: .5rem
+  color: $color-meta
+  text-align: center
+  font-size: 14px
+  line-height: 20px
+  font-variant-numeric: tabular-nums
+
+  [data-unit]
+    display: inline-block
+    min-width: 2ch
+    text-align: center
+
+  [data-unit="days"]
+    min-width: 3ch
+
+@media (max-width: 599px)
+  #footer
+    grid-template-columns: 1fr
+    gap: .6rem
+    padding-top: 2rem
+    padding-bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px))
+    text-align: center
+
+    .footer-theme
+      justify-content: center
+
+    .footer-left,
+    .footer-right
+      justify-self: center
+
+    ul
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      row-gap: .75rem
+
+@media print
+  #footer .footer-theme
+    display: none
+
+// 表单控件也使用本站统一字体。
+button, input, textarea, select
+  font-family: $font-family-body
+
+// 公文字体层级：文章主标题二号小标宋，正文及层次标题三号。
+// 各中文字体通过 unicode-range 限定范围，英文仍为 Times New Roman。
+body h1, #header h1, article header .posttitle, .posttitle
+  font-family: "Times New Roman", "Document Title", "Document Title Fallback", "Document Latin", serif
+  font-weight: 400
+  font-size: 22pt
+  line-height: 1.4
+  letter-spacing: normal
+
+article header .posttitle
+  text-align: center
+
+body h2, body h2.h1, body .h2
+  font-family: "Times New Roman", "Document Hei", "Document Latin", serif
+  font-weight: 400
+  font-size: 16pt
+  line-height: 1.6
+
+body h3
+  font-family: "Times New Roman", "Document Kai", "Document Latin", serif
+  font-weight: 400
+  font-style: normal
+  font-size: 16pt
+  line-height: 1.6
+  text-decoration: none
+
+body h4, body h5, body h6
+  display: block
+  font-family: "Times New Roman", "Document FangSong", "Document Latin", serif
+  font-weight: 700
+  font-size: 16pt
+  line-height: 1.6
+
+article .content h2:before
+  content: none
+
+// 覆盖浏览器对行内代码默认使用的等宽字体。
+body code, body kbd, body samp
+  font-family: $font-family-body
+
+// One UI scale: navigation, metadata, copyright, mode control, and age.
+#header #nav, article header .meta, article header .meta *,
+#footer, #footer .footer-left, #footer .footer-right,
+#footer .footer-age, #footer .theme-toggle, #footer nav,
+#footer-post, #footer-post #actions-footer, #footer-post #nav-footer
+  font-size: 14px
+  line-height: 1.5
+
+#footer .footer-left
+  height: auto
+  line-height: 1.5
+
+#footer .footer-age
+  min-height: 21px
+
+body pre, body .highlight
+  font-size: 16px
+  line-height: 1.6
+
+body pre code, body .highlight pre
+  font-size: inherit
+  line-height: inherit
+
+body code, body kbd, body samp
+  font-size: 1em
+
+body .highlight .line
+  height: auto
+  min-height: 1.6em
+
+// 站名属于品牌标题，在窄屏中保持单行；导航使用统一 UI 字号。
+#header h1
+  font-size: 26px
+  line-height: 1.4
+
+#header #nav
+  font-weight: 400
+
+#header #nav ul
+  line-height: 1.5
+
+// 正文强调使用实际字重与斜体；中文缺少对应字形时允许浏览器合成。
+body strong, body b
+  font-weight: 700
+  font-synthesis: weight style
+
+body em, body i:not([class*="fa"])
+  font-style: italic
+  font-synthesis: weight style
+
+// 恢复可点击文字的绿色，两种模式仍共用字体、尺寸和排版。
+body .content a:not(.u-url):not(.icon), #header #nav a, #footer nav a
+  color: $color-link
+
+body .content a:not(.u-url):not(.icon):hover, #header #nav a:hover, #footer nav a:hover
+  color: $color-link
+
+#footer-post a, #header-post a.icon
+  color: $color-link
+
+// One underline for every clickable link, including navigation, headings and icons.
+// Native decoration follows wrapped text without changing layout or covering glyphs.
+body a, body a:hover, body a:focus-visible, body a:visited
+  background-image: none !important
+  text-decoration-line: underline !important
+  text-decoration-thickness: 1.5px !important
+  text-decoration-color: currentColor !important
+  text-underline-offset: .22em !important
+  text-decoration-skip-ink: auto !important
+
+// Mode selection uses the same line and gap as the footer links.
+.theme-toggle span
+  border-bottom: 0
+
+.theme-toggle[aria-pressed="false"] .theme-choice-light,
+.theme-toggle[aria-pressed="true"] .theme-choice-dark
+  text-decoration-line: underline
+  text-decoration-thickness: 1.5px
+  text-decoration-color: currentColor
+  text-underline-offset: .22em
+  text-decoration-skip-ink: auto
+
+// The site brand remains clickable without an underline.
+body #header a.u-url, body #header a.u-url:hover,
+body #header a.u-url:focus-visible, body #header a.u-url:visited
+  text-decoration-line: none !important
+
+// Render the site portrait in a fixed circular frame, in its original colors.
+#header #logo
+  border-radius: 50%
+  aspect-ratio: 1
+  object-fit: cover
+  filter: none
+  -webkit-filter: none

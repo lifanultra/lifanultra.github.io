@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "TZ=Asia/Shanghai npm run build",
+  "outputDirectory": "public",
+  "installCommand": "npm ci",
+  "cleanUrls": false,
+  "trailingSlash": true,
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "*": false
+    }
+  }
+}
