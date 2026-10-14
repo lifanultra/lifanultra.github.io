@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 李凡的博客
+title: "LIFANULTRA's Blog"
 subtitle: ''
 description: ''
 keywords:
@@ -130,6 +130,7 @@ theme_config:
 
   # 版权年份
   copyright:
+    owner: LIFANULTRA
     start_year: 2015
     end_year: 2026
 
