@@ -52,13 +52,13 @@
     <!-- async scripts -->
     <%- partial('./google_analytics.ejs') %>
     <%- partial('./umami_analytics.ejs') %>
-    <!-- styles -->
+    <!-- Both palettes block initial rendering. The following classic script selects a fully loaded sheet before the body is parsed. -->
     <link id="theme-dark" rel="stylesheet" href="<%- url_for('css/style.css') %>">
-    <link id="theme-light" rel="stylesheet" href="<%- url_for('css/style-light.css') %>" media="not all">
+    <link id="theme-light" rel="stylesheet" href="<%- url_for('css/style-light.css') %>">
+    <script src="<%- url_for('js/theme-mode.js') %>"></script>
     <link rel="stylesheet" href="<%- url_for('css/fonts-cdn.css') %>">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="<%- url_for('js/theme-mode.js') %>"></script>
     <!-- persian styles -->
     <% if (theme.direction && theme.direction === 'rtl') { %>
       <%- css('css/rtl') %>

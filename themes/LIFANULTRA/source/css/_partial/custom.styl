@@ -217,3 +217,25 @@ body .content a:not(.u-url):not(.icon):hover, #header #nav a:hover, #footer nav 
 
 #footer-post a, #header-post a.icon
   color: $color-link
+
+// One underline for every clickable link, including navigation, headings and icons.
+// Native decoration follows wrapped text without changing layout or covering glyphs.
+body a, body a:hover, body a:focus-visible, body a:visited
+  background-image: none !important
+  text-decoration-line: underline !important
+  text-decoration-thickness: 1px !important
+  text-decoration-color: currentColor !important
+  text-underline-offset: .22em !important
+  text-decoration-skip-ink: auto !important
+
+// Mode selection uses the same line and gap as the footer links.
+.theme-toggle span
+  border-bottom: 0
+
+.theme-toggle[aria-pressed="false"] .theme-choice-light,
+.theme-toggle[aria-pressed="true"] .theme-choice-dark
+  text-decoration-line: underline
+  text-decoration-thickness: 1px
+  text-decoration-color: currentColor
+  text-underline-offset: .22em
+  text-decoration-skip-ink: auto
